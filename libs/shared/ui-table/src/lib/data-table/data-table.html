@@ -1,0 +1,54 @@
+<div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+  <table class="w-full text-left text-sm">
+    <thead class="bg-gray-50 text-gray-500">
+      <tr>
+        @for (col of columns(); track col.key) {
+          <th class="px-6 py-3 font-medium">{{ col.label }}</th>
+        }
+        <th class="px-6 py-3 text-right font-medium">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      @for (row of pagedRows(); track row.id) {
+        <tr>
+          @for (col of columns(); track col.key) {
+            <td class="px-6 py-4 text-gray-700">
+              @if (col.badge) {
+                <span
+                  class="rounded-full px-2.5 py-0.5 text-xs font-medium"
+                  [class]="badgeClass(row[col.key])"
+                >
+                  {{ row[col.key] }}
+                </span>
+              } @else {
+                {{ row[col.key] }}
+              }
+            </td>
+          }
+          <td class="px-6 py-4 text-right text-gray-400">⋮</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <div
+    class="flex items-center justify-between border-t border-gray-100 px-6 py-3 text-sm text-gray-500"
+  >
+    <span>
+      Showing {{ (page() - 1) * pageSize() + 1 }} to {{ rangeEnd() }} of
+      {{ rows().length }} records
+    </span>
+    <div class="flex gap-1">
+      @for (p of pages(); track p) {
+        <button
+          type="button"
+          class="h-7 w-7 rounded"
+          [class]="p === page() ? 'bg-blue-600 text-white' : 'hover:bg-gray-100'"
+          (click)="setPage(p)"
+        >
+          {{ p }}
+        </button>
+      }
+    </div>
+  </div>
+</div>

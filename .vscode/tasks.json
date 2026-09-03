@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "start all",
+      "type": "shell",
+      "command": "nx run-many -t serve",
+      "problemMatcher": []
+    }
+  ]
+}
