@@ -1,0 +1,10 @@
+<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  @for (stat of stats; track stat.label) {
+    <app-stats-card
+      [imgUrl]="stat.imgUrl"
+      [title]="stat.label"
+      [number]="stat.value"
+      [iconBg]="stat.iconBg"
+    />
+  }
+</div>

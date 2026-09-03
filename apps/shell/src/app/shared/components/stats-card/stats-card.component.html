@@ -1,0 +1,16 @@
+<div
+  class="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm"
+>
+  <span
+    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white"
+    [class]="iconBg()"
+  >
+    <img [src]="imgUrl()" class="h-5 w-5" [alt]="title()" />
+  </span>
+  <div>
+    <p class="text-xl font-bold leading-tight text-gray-900">
+      {{ number() }}
+    </p>
+    <p class="text-sm text-gray-500">{{ title() }}</p>
+  </div>
+</div>

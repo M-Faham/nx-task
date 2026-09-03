@@ -1,0 +1,27 @@
+<div class="flex items-start gap-3 rounded-xl p-5 shadow-lg" [class]="bg()">
+  <div
+    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-white"
+    [class]="iconBg()"
+  >
+    <img [src]="imgUrl()" class="h-5 w-5" [alt]="name()" />
+  </div>
+  <div>
+    <div>
+      <p class="font-bold">
+        {{ name() }}
+      </p>
+      <p class="font-semibold">
+        {{ sub() }}
+      </p>
+      <p class="mt-2 text-sm">{{ description() }}</p>
+    </div>
+    <a
+      [routerLink]="path()"
+      class="mt-4 inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors"
+      [class]="buttonBg()"
+    >
+      Go to {{ name() }}
+      →
+    </a>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="mx-auto max-w-6xl">
+  <h1 class="flex items-center gap-2 text-2xl font-bold text-gray-900">
+    Welcome back, {{ userName }}! <span>👋</span>
+  </h1>
+  <p class="mt-1 text-sm text-gray-500">
+    Here is an overview of your applications.
+  </p>
+
+  <app-stats></app-stats>
+
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-5">
+    @for (app of apps; track app.path) {
+      <app-data-card
+        [name]="app.name"
+        [sub]="app.sub"
+        [description]="app.description"
+        [path]="app.path"
+        [imgUrl]="app.imgUrl"
+        [bg]="app.bg"
+        [iconBg]="app.iconBg"
+        [buttonBg]="app.buttonBg"
+      />
+    }
+  </div>
+</div>
