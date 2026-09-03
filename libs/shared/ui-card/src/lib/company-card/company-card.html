@@ -1,0 +1,22 @@
+<div
+  class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
+>
+  <div class="bg-blue-50 px-6 py-4">
+    <h3 class="text-lg font-semibold text-blue-600">Company Information</h3>
+  </div>
+
+  <dl class="divide-y divide-gray-100 px-6">
+    @for (item of companyCardData(); track item.label) {
+    <div class="grid grid-cols-2 gap-4 py-4 text-sm">
+      <dt class="font-semibold text-gray-900">{{ item.label | titlecase }}</dt>
+      <dd class="text-gray-600">
+        @if (item.label === 'website') {
+        <a [href]="item.value" target="_blank" class="text-blue-600 underline">
+          {{ item.value }}
+        </a>
+        } @else { {{ item.value }} }
+      </dd>
+    </div>
+    }
+  </dl>
+</div>
