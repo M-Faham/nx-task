@@ -13,7 +13,7 @@ import { TableColumn } from './data-table.model';
 export class DataTable<T extends { id: number }> {
   columns = input.required<TableColumn<T>[]>();
   rows = input.required<T[]>();
-  pageSize = input(5);
+  pageSize = input(10);
 
   protected readonly page = signal(1);
 

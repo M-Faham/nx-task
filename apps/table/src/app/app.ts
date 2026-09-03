@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DataTable, TableColumn } from '@nx-task/ui-table';
 import { USERS_DATA } from './data/users';
-import { User } from './user.model';
+import { User } from '@nx-task/models';
 
 @Component({
   imports: [RouterModule, DataTable],

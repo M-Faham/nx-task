@@ -1,4 +1,4 @@
-import { User } from '../user.model';
+import { User } from '@nx-task/models';
 
 export const USERS_DATA: User[] = [
   { id: 1, name: 'Mahmoud Mohamed', department: 'IT', status: 'Active' },

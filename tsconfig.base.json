@@ -16,7 +16,8 @@
     "strict": false,
     "paths": {
       "@nx-task/ui-card": ["./libs/shared/ui-card/src/index.ts"],
-      "@nx-task/ui-table": ["./libs/shared/ui-table/src/index.ts"]
+      "@nx-task/ui-table": ["./libs/shared/ui-table/src/index.ts"],
+      "@nx-task/models": ["./libs/shared/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

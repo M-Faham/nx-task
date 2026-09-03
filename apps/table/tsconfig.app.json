@@ -6,7 +6,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "../../libs/shared/ui-table/src/index.ts"
+    "../../libs/shared/ui-table/src/index.ts",
+    "../../libs/shared/models/src/index.ts"
   ],
   "exclude": [
     "src/**/*.spec.ts",

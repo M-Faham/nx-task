@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { Company, CompanyCard } from '@nx-task/ui-card';
+import { CompanyCard } from '@nx-task/ui-card';
+import { Company } from '@nx-task/models';
 
 @Component({
   imports: [CompanyCard],

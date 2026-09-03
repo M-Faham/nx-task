@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import { Company } from './company-card.model';
+import { Company } from '@nx-task/models';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({
