@@ -9,11 +9,11 @@ export const appRoutes: Route[] = [
   {
     path: 'table',
     loadComponent: () =>
-      loadRemoteModule('table', './Component').then((m) => m.App),
+      loadRemoteModule('table', './Component').then((m) => m.TableApp),
   },
   {
     path: 'data',
     loadComponent: () =>
-      loadRemoteModule('data', './Component').then((m) => m.App),
+      loadRemoteModule('data', './Component').then((m) => m.DataApp),
   },
 ];
